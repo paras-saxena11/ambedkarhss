@@ -1,0 +1,238 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    
+  }
+  .secondaryText {
+    font-family: "Raleway", sans-serif;
+    color: #d18410;
+  }
+  .subHeading {
+    color: white;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+  }
+  .primaryText {
+    color: black;
+    font-family: "Judson", serif;
+  }
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #1a2107;
+    height: 6rem;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+  }
+  .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    width: 40%;
+    overflow-y: hidden;
+  }
+  .logo a {
+    text-decoration: none;
+  }
+  .logoHead{
+    color: whitesmoke;
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #navbar {
+    height: 9vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .navlinks {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  #navbar li {
+    list-style: none;
+  }
+  #navbar li a {
+    text-decoration: none;
+  }
+  #navbar a:hover {
+    color: gray;
+  }
+  #navbar .current {
+    color: #d18410;
+  }
+
+.line1 {
+  background-color: black;
+  padding: 2px;
+  margin: 5px;
+  width: 40px;
+}
+.line2 {
+  background-color: black;
+  padding: 2px;
+  margin: 5px;
+  width: 40px;
+}
+.line3 {
+  width: 40px;
+  background-color: black;
+  padding: 2px;
+  margin: 5px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.about{
+  margin: 3rem 9rem;
+  height: 300px;
+  padding: 2rem 2rem;
+  background-color: rgb(247, 247, 247);
+}
+.about h1{
+  font-size: 30px;
+}
+.lists li{
+  margin: 3rem;
+}
+.lists li a{ 
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+}
+.lists a:hover{
+  color: black;
+}
+.footer{
+  height: 55vh;
+  width: 100vw;
+  background-color: #1a2107;
+  display: flex;
+  color: rgb(203, 201, 197);
+}
+.footer_box{
+  width: 25%;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+.footer_box h3{
+  margin-bottom: 1rem;
+}
+.footer_box li{
+  margin: 5px;
+  padding-left: 25%;
+}
+.footer_box p{
+  text-align: justify;
+}
+.footer_box a{
+text-decoration: none;
+color: rgb(181, 180, 180);
+}
+.footer_box a:hover{
+color: black;
+}
+.copyright{
+  height: 3rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: white;
+  background-color: #2b3418;
+}
+/* RESPONSIVE code */
+@media screen and (max-width: 1020px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navlinks {
+    position: absolute;
+    top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 65%;
+    background-color: #354259;
+    transform: translateX(100%);
+    transition: all 0.3s ease-out;
+    z-index: 11;
+    display: none;
+  }
+  .navlinks li:hover {
+    color: gray;
+  }
+  .logoHead{
+    font-size: 9px;
+  }
+  .burger {
+    display: block;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+  .about{
+    margin: 3rem 2rem;
+  }
+  .about h1{
+    font-size: 30px;
+  }
+  .lists li{
+    margin: 1rem;
+  }
+  .lists li a{ 
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+  }
+  .footer{
+    height: 162vh;
+    flex-direction: column;
+  }
+  .footer_box{
+    width: 100%;
+    height: 44vh;
+    padding: 1rem;
+  }
+  .footer_box p,a{
+    font-size: 20px;
+    width: 90%;
+  }
+  .footer_box h3{
+    margin-bottom: 1rem;
+    text-align: start;
+  }
+  .footer_box li{
+    margin: 5px;
+    padding-left: 0%;
+  }
+  .footer_box a:hover{
+  color: black;
+  }
+  .copyright{
+    height: 5rem;
+    font-size: 16px;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+  /* opacity: 1; */
+  display: flex;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
